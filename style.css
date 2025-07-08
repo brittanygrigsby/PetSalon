@@ -1,0 +1,41 @@
+.pet-card{
+    display:flex;
+    align-items: center;
+    background-color: pink;
+    margin: 10px 5px;
+    border: solid 1px black;
+    padding: 0 px 10px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.salon-header{
+    background-color: lavenderblush;
+    height: 60px;
+    background-size: cover;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+}
+.pet-form{
+    display:flex;
+    align-items: center;
+    background-color: rgb(206, 119, 159);
+    margin: 10px 5px;
+    border: solid 1px black;
+    padding: 0 px 10px;
+    text-align: center;
+    width: 800px;
+    height: 50px;
+    
+    
+}
+
+.petcount{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.error-border {
+  border: 3px solid red;
+}
