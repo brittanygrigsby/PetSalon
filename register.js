@@ -4,6 +4,12 @@ let pets = [
     { name: "Bebe", age: 4, gender: "Female", service: "Spa", type: "Dog", breed: "Pug" },
     { name: "Bob", age: 2, gender: "Male", service: "Day care", type: "Dog", breed: "Terrier" }
 ];
+//////Delete pet button//////////////////////////////////////////
+function deletePet(index) {
+    pets.splice(index, 1);
+    displayPetCount();
+    displayAllPets();
+}
 
 /////////////////////////Pet Constructor//////////////////////////////////
 function Pet(name, age, gender, service, type, breed) {
@@ -28,7 +34,7 @@ function displayPetCount() {
 /////////////////////// Display all pets//////////////////////////////////
 function displayAllPets() {
     petsList.innerHTML = "";
-    pets.forEach(newPet => {
+    pets.forEach((newPet,index) => {
         petsList.innerHTML += `
             <div class="pet-card">
                 <p>${newPet.name}</p>
@@ -37,11 +43,14 @@ function displayAllPets() {
                 <p>Service: ${newPet.service}</p>
                 <p>Type: ${newPet.type}</p>
                 <p>Breed: ${newPet.breed}</p>
+                <button class="delete-btn" onclick="deletePet(${index})">Delete</button>
             </div>
         `;
 
-        
+    
+
     });
+
 }
 
 //////Pet Registration///////////////////////////////////////////////////
@@ -66,6 +75,8 @@ function registerPet(event) {
 
 // Gather and upload new inputted pet/////////////////////////////
 petRegistrationForm.addEventListener("submit", registerPet);
+
+
 
 
 displayPetCount();
