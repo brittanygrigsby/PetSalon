@@ -10,34 +10,34 @@ $(document).ready(function () {
         event.preventDefault();
 
 ////////////////////////////////////
-        const nameInput = $("#serviceName");
-        const descInput = $("#serviceDescription");
-        const priceInput = $("#servicePrice");
+        const nameEntry = $("#serviceName");
+        const descEntry = $("#serviceDescription");
+        const priceEntry = $("#servicePrice");
 
-        const name = nameInput.val().trim();
-        const description = descInput.val().trim();
-        const price = priceInput.val().trim();
+        const name = nameEntry.val().trim();
+        const description = descEntry.val().trim();
+        const price = priceEntry.val().trim();
 
 // Reset all error borders first////////
-        nameInput.removeClass("error-border");
-        descInput.removeClass("error-border");
-        priceInput.removeClass("error-border");
+        nameEntry.removeClass("error-border");
+        descEntry.removeClass("error-border");
+        priceEntry.removeClass("error-border");
 
 // Form Validation Fields/////////////////
         let hasError = false;
 
         if (!name) {
-            nameInput.addClass("error-border");
+            nameEntry.addClass("error-border");
             hasError = true;
         }
 
         if (!description) {
-            descInput.addClass("error-border");
+            descEntry.addClass("error-border");
             hasError = true;
         }
 
         if (!price || isNaN(price) || price <= 0) {
-            priceInput.addClass("error-border");
+            priceEntry.addClass("error-border");
             hasError = true;
         }
 
@@ -53,8 +53,8 @@ $(document).ready(function () {
 
 // Clears the forms and removes previous error red borders/////////////////////
         $("#serviceRegistrationForm")[0].reset();
-        nameInput.removeClass("error-border");
-        descInput.removeClass("error-border");
-        priceInput.removeClass("error-border");
+        nameEntry.removeClass("error-border");
+        descEntry.removeClass("error-border");
+        priceEntry.removeClass("error-border");
     });
 });

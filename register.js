@@ -4,7 +4,7 @@ let pets = [
     { name: "Bebe", age: 4, gender: "Female", service: "Spa", type: "Dog", breed: "Pug" },
     { name: "Bob", age: 2, gender: "Male", service: "Day care", type: "Dog", breed: "Terrier" }
 ];
-//////Delete pet button//////////////////////////////////////////
+//////Delete pet//////////////////////////////////////////
 function deletePet(index) {
     pets.splice(index, 1);
     displayPetCount();
