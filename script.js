@@ -28,5 +28,17 @@ function displaySalonInformation() {
     salonContainer.innerHTML = information;
 }
 
+$(document).ready(function() {
+
+$("#changeModeButton").click(function(){
+
+    $("body").toggleClass("dark-mode");
+
+const isDark = $("body").hasClass("dark-mode");
+
+
+});
+});
+
 
 displaySalonInformation();
