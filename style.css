@@ -32,6 +32,34 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.about-header{
+ display:block;
+ font-weight: bold;
+ color: var(--text);
+ height: 50px;
+ background-size: cover;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-weight:bold ;
+ text-align: center;
+ text-decoration: underline;
+ line-height: 60px;
+ transition: background-color 0.5s ease, color 0.5s ease;
+}
+/*about paragraph on homepage*/
+.about-par {
+  color: var(--text);
+  background-color: var(--light-bg);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto; 
+  border-radius: 10px;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+
 h1 {
   color: var(--text);
   font-size: 50px;
@@ -92,11 +120,11 @@ button:hover, a:hover {
   flex-direction: row;
   text-align: center;
 }
-
+/*For missing inputs on form*/
 .error-border {
   border: 3px solid red;
 }
-
+/*To delete pet from card*/
 .delete-btn {
   background-color: hotpink;
   color: white;
@@ -112,7 +140,7 @@ button:hover, a:hover {
   background-color: #a71d2a;
 }
 
-/* Header row and image */
+/* images on home page */
 .header-row {
   display: flex;
   justify-content: center;
@@ -132,15 +160,67 @@ button:hover, a:hover {
   border-radius: 50%;
   border: 3px solid var(--text);
 }
-
+/*Stores the Pet salon information on home page*/
 #salonContainer {
   margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
   max-width: 600px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   background-color: var(--surface);
   color: var(--text);
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Allows nav bar to toggle to dark mode as well*/
+.custom-navbar {
+  background-color: lavenderblush !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: #333 !important;
+}
+
+/* Dark mode activated via class on body */
+.dark-mode .custom-navbar {
+  background-color: #1A2744 !important;
+}
+
+.dark-mode .custom-navbar .nav-link,
+.dark-mode .custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+.service-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.service-image {
+  display: inline-block;
+  margin: 10px;
+}
+
+.service-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--text);
+}
+
+.service-header{
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  height: 60px;
+  background-size: cover;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
 }

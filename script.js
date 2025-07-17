@@ -29,16 +29,16 @@ function displaySalonInformation() {
 }
 
 $(document).ready(function() {
+displaySalonInformation();
 
 $("#changeModeButton").click(function(){
-
-    $("body").toggleClass("dark-mode");
+$("body").toggleClass("dark-mode");
 
 const isDark = $("body").hasClass("dark-mode");
 
 
 });
+
 });
 
 
-displaySalonInformation();
